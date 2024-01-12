@@ -15,10 +15,10 @@ Android Bluetooth Low Energy
 
 
 ### Preview
-![Preview_1](https://gitee.com/wzp_vicky/FastBle/blob/master/preview/new_1.png) 
-![Preview_2](https://gitee.com/wzp_vicky/FastBle/blob/master/preview/new_2.png) 
-![Preview_3](https://gitee.com/wzp_vicky/FastBle/blob/master/preview/new_3.png)
-![Preview_4](https://gitee.com/wzp_vicky/FastBle/blob/master/preview/new_4.png)
+![Preview_1](./preview/new_1.png) 
+![Preview_2](./preview/new_2.png) 
+![Preview_3](./preview/new_3.png)
+![Preview_4](./preview/new_4.png)
 
 
 ### APK

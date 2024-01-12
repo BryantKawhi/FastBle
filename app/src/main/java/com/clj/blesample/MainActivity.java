@@ -34,6 +34,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.clj.GEBLECoreHelper;
 import com.clj.blesample.adapter.DeviceAdapter;
 import com.clj.blesample.comm.ObserverManager;
 import com.clj.blesample.operation.OperationActivity;
@@ -44,7 +45,9 @@ import com.clj.fastble.callback.BleRssiCallback;
 import com.clj.fastble.callback.BleScanCallback;
 import com.clj.fastble.data.BleDevice;
 import com.clj.fastble.exception.BleException;
+import com.clj.fastble.permission.listener.BLEInitListener;
 import com.clj.fastble.scan.BleScanRuleConfig;
+import com.clj.fastble.utils.BleLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -344,7 +347,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void checkPermissions() {
+    private void checkPermissions2() {
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (!bluetoothAdapter.isEnabled()) {
             Toast.makeText(this, getString(R.string.please_open_blue), Toast.LENGTH_LONG).show();
@@ -365,6 +368,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String[] deniedPermissions = permissionDeniedList.toArray(new String[permissionDeniedList.size()]);
             ActivityCompat.requestPermissions(this, deniedPermissions, REQUEST_CODE_PERMISSION_LOCATION);
         }
+    }
+
+    private void checkPermissions() {
+        GEBLECoreHelper mBLEHelper = GEBLECoreHelper.getInstance(this);
+        mBLEHelper.enableLog(true).setBLEInitListener(new BLEInitListener() {
+            @Override
+            public void inspectFail(int code, String errorMsg) {
+                BleLog.i("页面回调检查失败-->" + code + errorMsg);
+
+            }
+
+            @Override
+            public void inspectSuccess(int code, String message) {
+                BleLog.i("页面回调检查成功" + code + message);
+
+                if (code == 100) {
+                    mBLEHelper.start2Scan();
+                    startScan();
+                } else if (code == 600) {
+                    mBLEHelper.check2OpenBluetooth();
+                } else {
+                }
+            }
+        }).checkPermission(this);
     }
 
     private void onPermissionGranted(String permission) {
