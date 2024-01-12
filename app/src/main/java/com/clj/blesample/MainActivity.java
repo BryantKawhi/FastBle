@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BleManager.getInstance().init(getApplication());
         BleManager.getInstance()
                 .enableLog(true)
+                .logTag("蓝牙底层sdk")
                 .setReConnectCount(1, 5000)
                 .setConnectOverTime(20000)
                 .setOperateTimeout(5000);

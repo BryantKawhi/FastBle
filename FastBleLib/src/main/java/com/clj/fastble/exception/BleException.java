@@ -1,7 +1,7 @@
 package com.clj.fastble.exception;
 
-import java.io.Serializable;
 
+import java.io.Serializable;
 
 public abstract class BleException implements Serializable {
 

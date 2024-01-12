@@ -277,7 +277,12 @@ public class BleManager {
      * @return BleManager
      */
     public BleManager enableLog(boolean enable) {
-        BleLog.isPrint = enable;
+        BleLog.isDebug = enable;
+        return this;
+    }
+
+    public BleManager logTag(String tag) {
+        BleLog.defaultTag = tag;
         return this;
     }
 
