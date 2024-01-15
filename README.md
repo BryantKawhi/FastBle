@@ -27,34 +27,12 @@ If you want to quickly preview all the functions, you can download APK as a test
  [FastBLE.apk](https://www.pgyer.com/OGzWeG) 
 
 
-### Gradle
-
-- Setp1: Add it in your root build.gradle at the end of repositories
-
-        allprojects {
-            repositories {
-                ...
-                maven { url 'https://jitpack.io' }
-            }
-        }
-
-
-- Step2: Add the dependency
-
-        dependencies {
-            implementation 'com.github.Jasonchenlijian:FastBle:2.4.0'
-        }
-    
-### Jar
-
-[FastBLE-2.4.0.jar](https://github.com/Jasonchenlijian/FastBle/raw/master/FastBLE-2.4.0.jar)
-
 
 ## Wiki
 
-[中文文档](https://github.com/Jasonchenlijian/FastBle/wiki)
+[中文文档](https://github.com/wangzhipeng-vicky/FastBle/wiki)
 
-[Android BLE开发详解和FastBle源码解析](https://www.jianshu.com/p/795bb0a08beb)
+[//]: # ([Android BLE开发详解和FastBle源码解析]&#40;https://www.jianshu.com/p/795bb0a08beb&#41;)
 
 
 
