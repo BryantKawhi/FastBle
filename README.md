@@ -1,4 +1,4 @@
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/fastble_poster.png)
+![效果图](./app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
 最新的使用java  18.0.2  
 
@@ -24,7 +24,7 @@ Android Bluetooth Low Energy
 ### APK
 If you want to quickly preview all the functions, you can download APK as a test tool directly.
 
- [FastBLE.apk](https://github.com/Jasonchenlijian/FastBle/raw/master/FastBLE.apk) 
+ [FastBLE.apk](https://www.pgyer.com/OGzWeG) 
 
 
 ### Gradle
