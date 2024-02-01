@@ -1,10 +1,5 @@
 jdk:
-  - openjdk18
+  - openjdk9
 before_install:
-  - sdk install java 18.0.2
-  - sdk use java 18.0.2
-install:
-  - echo "Running a custom install command"
-  - ./gradlew clean install -xtest
-env:
-  MYVAR: "custom environment variable"
+  - sdk install java 18.0.1.1-open
+  - sdk use java 18.0.1.1-open
