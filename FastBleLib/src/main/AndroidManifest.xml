@@ -10,7 +10,7 @@
     <application>
 
         <activity
-            android:name=".permission.PermissionRequestActivity"
+            android:name="com.clj.fastble.permission.PermissionRequestActivity"
             android:screenOrientation="portrait"
             android:theme="@style/translucent" />
     </application>

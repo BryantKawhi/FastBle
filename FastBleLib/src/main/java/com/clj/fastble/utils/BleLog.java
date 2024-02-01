@@ -6,7 +6,7 @@ import android.util.Log;
 public final class BleLog {
 
     public static boolean isDebug = true;
-    public static String defaultTag = "WZP_BleHelper_Vicky";
+    public static String defaultTag = "WZP_Vicky_BleHelper_";
 
     public static void d(String msg) {
         if (isDebug && msg != null)
