@@ -1,8 +1,8 @@
 jdk:
-  - openjdk11
+  - openjdk18
 before_install:
-  - sdk install java 11.0.10-open
-  - sdk use java 11.0.10-open
+  - sdk install java 18.0.2
+  - sdk use java 18.0.2
 install:
   - echo "Running a custom install command"
   - ./gradlew clean install -xtest
